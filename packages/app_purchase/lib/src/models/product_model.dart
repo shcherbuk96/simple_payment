@@ -18,9 +18,5 @@ class ProductModel with _$ProductModel {
     required String description,
     required String title,
     required double rawPrice,
-    // required String countryCode,
-    // required ProductPeriod period,
-    // required int numberOfPeriod,
-    // required int subscriptionGroupId,
   }) = _ProductModel;
 }

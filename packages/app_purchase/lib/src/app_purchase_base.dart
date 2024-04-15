@@ -1,5 +1,3 @@
-// TODO: Put public facing types in this file.
-
 import 'dart:async';
 import 'dart:io';
 
@@ -16,8 +14,6 @@ final class AppPurchase {
 
     _subscription = _inAppPurchase.purchaseStream.listen(
       (final purchaseDetailsList) async {
-        print('listen ');
-
         await _listenToPurchaseUpdated(purchaseDetailsList);
 
         _purchaseStream.add(purchaseDetailsList);
@@ -165,8 +161,6 @@ final class AppPurchase {
     }
 
     for (final purchaseDetails in purchaseDetailsList) {
-      print('purchaseDetails.status  ${purchaseDetails.status}');
-
       if (purchaseDetails.status == PurchaseStatus.pending) {
         _purchasePending = true;
       } else {
@@ -204,9 +198,7 @@ final class AppPurchase {
     return Future<bool>.value(true);
   }
 
-  void _handleInvalidPurchase(PurchaseDetails purchaseDetails) {
-    print('_handleInvalidPurchase');
-  }
+  void _handleInvalidPurchase(PurchaseDetails purchaseDetails) {}
 
   void _handleError(IAPError error) {
     _purchasePending = false;

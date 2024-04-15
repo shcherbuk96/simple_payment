@@ -32,7 +32,6 @@ class _MyAppState extends State<_MyApp> {
   void initState() {
     appPurchase.initStoreInfo();
     appPurchase.purchaseStream.listen((event) {
-      print('purchaseStream');
       setState(() {});
     });
     super.initState();
