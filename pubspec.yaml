@@ -43,6 +43,8 @@ dependencies:
   in_app_purchase: ^3.1.13
   in_app_purchase_android: ^0.3.3
   in_app_purchase_storekit: ^0.3.13+1
+  app_purchase:
+    path: packages/app_purchase
 
 dev_dependencies:
   flutter_test:
